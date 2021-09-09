@@ -167,7 +167,7 @@ let init ?(stdio_only = false) work_dir =
     else work_dir
   in
   let preamble =
-    if stdio_only then "#include <stdio.h>" else bugzoo_instrument_code ()
+    if stdio_only then "#include <stdio.h>\n" else bugzoo_instrument_code ()
   in
   file_instrument_all work_dir preamble;
   {
